@@ -4,6 +4,19 @@ import { FaWater, FaSolarPanel, FaHardHat, FaAtom, FaTools, FaChartLine } from "
 export default function ServicesSection() {
   const services = [
     {
+      icon: <FaHardHat className="text-4xl text-[#BCBCBC]" />,
+      title: "Drilling Services",
+      description: "Horizontal and Directional Drilling for energy and mining sectors",
+      highlights: [
+        "Supply of Drill Rigs",
+        "Rebuild, Service and Maintenance",
+        "Drilling Consumables",
+        "Drilling Fluids",
+        "Imdex-Devico Survey Equipment",
+        "ITH Consumables and Drilling Rods"
+      ]
+    },
+    {
       icon: <FaWater className="text-4xl text-[#00B4D8]" />,
       title: "Water Solutions",
       description: "Borehole drilling, water treatment, and sustainable water infrastructure development",
@@ -23,19 +36,19 @@ export default function ServicesSection() {
         "Energy efficiency audits"
       ]
     },
-    {
-      icon: <FaHardHat className="text-4xl text-[#BCBCBC]" />,
-      title: "Drilling Services",
-      description: "Specialized drilling for mining, energy and civil engineering projects",
-      highlights: [
-        "Directional drilling",
-        "Core sampling",
-        "IMDEX DEVICO equipment"
-      ]
-    },
+    // {
+    //   icon: <FaHardHat className="text-4xl text-[#BCBCBC]" />,
+    //   title: "Drilling Services",
+    //   description: "Specialized drilling for mining, energy and civil engineering projects",
+    //   highlights: [
+    //     "Directional drilling",
+    //     "Core sampling",
+    //     "IMDEX DEVICO equipment"
+    //   ]
+    // },
     {
       icon: <FaAtom className="text-4xl text-[#70E000]" />,
-      title: "Hydrogen Projects",
+      title: "Hydrogen",
       description: "Pioneering natural hydrogen exploration and future fuel solutions",
       highlights: [
         "Resource mapping",

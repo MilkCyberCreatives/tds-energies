@@ -9,7 +9,6 @@ export default function ProjectsPage() {
       id: 1,
       title: "Mpumalanga Water Initiative",
       category: "Water Solutions",
-      description: "20 solar-powered boreholes serving rural communities",
       image: "/images/projects/borehole.jpg",
       tags: ["SDG 6", "Community", "Solar Pumps"]
     },
@@ -17,15 +16,13 @@ export default function ProjectsPage() {
       id: 2,
       title: "Industrial Solar Farm",
       category: "Renewable Energy",
-      description: "5MW solar PV plant for manufacturing facility",
       image: "/images/projects/solar-farm.jpg",
       tags: ["Commercial", "Grid-tied", "Battery Storage"]
     },
     {
       id: 3,
-      title: "Hydrogen Exploration",
+      title: "Hydrogen",
       category: "Future Fuels",
-      description: "Natural hydrogen resource mapping in Free State",
       image: "/images/projects/hydrogen.jpg",
       tags: ["Research", "Clean Energy", "Innovation"]
     },
@@ -33,7 +30,6 @@ export default function ProjectsPage() {
       id: 4,
       title: "Mining Infrastructure",
       category: "Drilling Services",
-      description: "Directional drilling for platinum mine expansion",
       image: "/images/projects/mining-drill.jpg",
       tags: ["Precision", "Safety", "Core Sampling"]
     }
@@ -41,9 +37,9 @@ export default function ProjectsPage() {
 
   const categories = [
     { name: "All", icon: <FaSearch /> },
+    { name: "Drilling", icon: <FaHardHat /> },
     { name: "Water", icon: <FaWater /> },
     { name: "Energy", icon: <FaSolarPanel /> },
-    { name: "Drilling", icon: <FaHardHat /> },
     { name: "Hydrogen", icon: <FaLeaf /> }
   ];
 
@@ -174,14 +170,14 @@ export default function ProjectsPage() {
                     ))}
                   </div>
 
-                  <motion.a
+                  {/* <motion.a
                     href={`/projects/${project.id}`}
                     className="inline-flex items-center text-[#FFD700] font-medium group"
                     whileHover={{ x: 5 }}
                   >
                     View Project Details
                     <FaArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
-                  </motion.a>
+                  </motion.a> */}
                 </div>
               </motion.div>
             ))}

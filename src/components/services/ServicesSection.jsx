@@ -24,7 +24,7 @@ const services = [
   },
   {
     icon: <FaLeaf className="text-[#FFD700] text-3xl" />,
-    title: "Future Fuels & Hydrogen",
+    title: "Hydrogen",
     description: "Pioneering hydrogen energy and other clean fuel innovations aligned with global net-zero targets.",
   },
   {

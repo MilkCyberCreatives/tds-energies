@@ -54,7 +54,7 @@ export default function ContactPage() {
               <span className="text-[#FFD700]">Contact</span> Us
             </h1>
             <p className="mt-4 text-[#BCBCBC] max-w-xl mx-auto">
-              We're here to answer your questions and support your energy journey.
+              We are here to answer your questions and support your energy journey.
             </p>
           </div>
         </section>
@@ -78,13 +78,13 @@ export default function ContactPage() {
                 {[
                   { icon: <FaEnvelope className="text-[#FFD700] text-2xl" />, 
                     title: "Email", 
-                    content: "info@tdsenergies.com" },
+                    content: "admin@techniquedrillingservices.co.za" },
                   { icon: <FaPhoneAlt className="text-[#FFD700] text-2xl" />, 
                     title: "Phone", 
-                    content: "+27 12 345 6789" },
+                    content: "+27 17 634 1922" },
                   { icon: <FaMapMarkerAlt className="text-[#FFD700] text-2xl" />, 
                     title: "Address", 
-                    content: "123 Energy Street, Johannesburg, South Africa" }
+                    content: "134 Albatros, Secunda, Mpumalanga, South Africa" }
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-4">
                     <div className="p-2">{item.icon}</div>
@@ -160,14 +160,19 @@ export default function ContactPage() {
         {/* Full-width Google Maps Section */}
         <section className="w-full relative">
           <div className="map-container">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.634037697072!2d28.04785631502834!3d-26.1824629834495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c1b6e3d3e1d%3A0x9f0b7a7b7b7b7b7b!2sJohannesburg%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
-              className="map-iframe"
-              allowFullScreen
-              loading="lazy"
-              title="TDS Energies Location"
-            />
-          </div>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3569.9916542639626!2d29.174321675425887!3d-26.520392876883115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1eeb1305b7f9407d%3A0x75151f2b6002b5f7!2sAlbatross%20St%2C%20Secunda%2C%202302!5e0!3m2!1sen!2sza!4v1754314708387!5m2!1sen!2sza"
+    width="100%"
+    height="450"
+    style={{ border: 0 }}
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+    className="map-iframe"
+    title="TDS Energies Location"
+  />
+</div>
+
           <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[#1a1a1a] to-transparent pointer-events-none" />
         </section>
 

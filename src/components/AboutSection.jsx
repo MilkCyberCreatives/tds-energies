@@ -4,6 +4,11 @@ import { FaWater, FaSolarPanel, FaOilCan, FaLeaf } from "react-icons/fa";
 export default function AboutSection() {
   const services = [
     {
+      icon: <FaOilCan className="text-3xl text-[#BCBCBC]" />,
+      title: "Drilling Expertise",
+      description: "Precision drilling for energy and mining sectors",
+    },
+    {
       icon: <FaWater className="text-3xl text-[#00B4D8]" />,
       title: "Water Solutions",
       description: "Sustainable borehole development and water infrastructure",
@@ -13,14 +18,14 @@ export default function AboutSection() {
       title: "Solar Energy",
       description: "Commercial and residential solar PV installations",
     },
-    {
-      icon: <FaOilCan className="text-3xl text-[#BCBCBC]" />,
-      title: "Drilling Expertise",
-      description: "Precision drilling for energy and mining sectors",
-    },
+    // {
+    //   icon: <FaOilCan className="text-3xl text-[#BCBCBC]" />,
+    //   title: "Drilling Expertise",
+    //   description: "Precision drilling for energy and mining sectors",
+    // },
     {
       icon: <FaLeaf className="text-3xl text-[#70E000]" />,
-      title: "Hydrogen Future",
+      title: "Hydrogen",
       description: "Pioneering natural hydrogen exploration",
     },
   ];
@@ -58,9 +63,7 @@ export default function AboutSection() {
               viewport={{ once: true }}
             >
               Founded in 2014 as Technique Drilling Services, we've evolved into{" "}
-              <span className="text-[#FFD700]">TDS Energies</span>, a 100% Black-owned,
-              woman-led infrastructure company driving South Africa's energy transition
-              through innovative water, energy, and hydrogen solutions.
+              <span className="text-[#FFD700]">TDS Energies</span>, a 100% Black-owned, 51% Black female youth-owned, innovative drilling and woman-led infrastructure company, driving South Africa’s energy transition through cutting-edge water, energy, and hydrogen solutions.
             </motion.p>
 
             <motion.div

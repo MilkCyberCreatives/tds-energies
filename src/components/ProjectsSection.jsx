@@ -7,7 +7,6 @@ export default function ProjectsSection() {
       id: 1,
       title: "Solar Farm Installation",
       category: "Renewable Energy",
-      description: "5MW solar PV plant for industrial client in Mpumalanga",
       image: "/images/projects/solar-farm.jpg",
       tags: ["Solar", "Commercial", "Grid-tied"]
     },
@@ -15,7 +14,6 @@ export default function ProjectsSection() {
       id: 2,
       title: "Community Boreholes",
       category: "Water Solutions",
-      description: "20 solar-powered boreholes for rural communities",
       image: "/images/projects/borehole.jpg",
       tags: ["Water Access", "SDG 6", "Solar Pumps"]
     },
@@ -23,7 +21,6 @@ export default function ProjectsSection() {
       id: 3,
       title: "Hydrogen Exploration",
       category: "Future Fuels",
-      description: "Natural hydrogen resource mapping in Free State",
       image: "/images/projects/hydrogen.jpg",
       tags: ["Research", "Clean Energy", "Innovation"]
     },
@@ -31,7 +28,6 @@ export default function ProjectsSection() {
       id: 4,
       title: "Mining Drilling Contract",
       category: "Drilling Services",
-      description: "Directional drilling for major mining operation",
       image: "/images/projects/mining-drill.jpg",
       tags: ["Mining", "Precision", "Safety"]
     }
@@ -157,14 +153,14 @@ export default function ProjectsSection() {
                   ))}
                 </div>
 
-                <motion.a
+                {/* <motion.a
                   href="#"
                   className="inline-flex items-center text-[#FFD700] font-medium group"
                   whileHover={{ x: 5 }}
                 >
                   View Case Study 
                   <FaArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
-                </motion.a>
+                </motion.a> */}
               </div>
             </motion.div>
           ))}
