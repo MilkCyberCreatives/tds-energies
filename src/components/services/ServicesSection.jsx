@@ -8,15 +8,16 @@ const services = [
     description: "Advanced drilling solutions for mining, construction, and water access, ensuring efficiency and safety.",
   },
   {
-    icon: <FaWater className="text-[#FFD700] text-3xl" />,
-    title: "Water Infrastructure Development",
-    description: "Design and implementation of sustainable water supply and purification systems for communities and industries.",
-  },
-  {
     icon: <FaSolarPanel className="text-[#FFD700] text-3xl" />,
     title: "Renewable Energy Solutions",
     description: "Solar, wind, and hybrid energy systems tailored for both rural and urban energy needs.",
   },
+  {
+    icon: <FaWater className="text-[#FFD700] text-3xl" />,
+    title: "Water Infrastructure Development",
+    description: "Design and implementation of sustainable water supply and purification systems for communities and industries.",
+  },
+  
   {
     icon: <FaRecycle className="text-[#FFD700] text-3xl" />,
     title: "Waste-to-Energy Projects",

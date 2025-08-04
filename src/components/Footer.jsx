@@ -109,10 +109,10 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3">
               {[
-                "Water Solutions",
-                "Solar Energy",
                 "Drilling Services",
-                "Hydrogen Projects",
+                "Solar Energy",
+                "Water Solutions",
+                "Hydrogen",
                 "Infrastructure Development"
               ].map((service, index) => (
                 <motion.li

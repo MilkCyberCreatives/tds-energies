@@ -17,16 +17,6 @@ export default function ServicesSection() {
       ]
     },
     {
-      icon: <FaWater className="text-4xl text-[#00B4D8]" />,
-      title: "Water Solutions",
-      description: "Borehole drilling, water treatment, and sustainable water infrastructure development",
-      highlights: [
-        "SDG 6 Compliance",
-        "Solar-powered pumps",
-        "Community water projects"
-      ]
-    },
-    {
       icon: <FaSolarPanel className="text-4xl text-[#FFD700]" />,
       title: "Renewable Energy",
       description: "End-to-end solar solutions for residential, commercial and industrial applications",
@@ -36,6 +26,17 @@ export default function ServicesSection() {
         "Energy efficiency audits"
       ]
     },
+    {
+      icon: <FaWater className="text-4xl text-[#00B4D8]" />,
+      title: "Water Solutions",
+      description: "Borehole drilling, water treatment, and sustainable water infrastructure development",
+      highlights: [
+        "SDG 6 Compliance",
+        "Solar-powered pumps",
+        "Community water projects"
+      ]
+    },
+    
     // {
     //   icon: <FaHardHat className="text-4xl text-[#BCBCBC]" />,
     //   title: "Drilling Services",
@@ -49,7 +50,7 @@ export default function ServicesSection() {
     {
       icon: <FaAtom className="text-4xl text-[#70E000]" />,
       title: "Hydrogen",
-      description: "Pioneering natural hydrogen exploration and future fuel solutions",
+      description: "Pioneering hydrogen exploration and future fuel solutions",
       highlights: [
         "Resource mapping",
         "Extraction technology",

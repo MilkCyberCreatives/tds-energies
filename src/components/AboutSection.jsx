@@ -9,15 +9,16 @@ export default function AboutSection() {
       description: "Precision drilling for energy and mining sectors",
     },
     {
-      icon: <FaWater className="text-3xl text-[#00B4D8]" />,
-      title: "Water Solutions",
-      description: "Sustainable borehole development and water infrastructure",
-    },
-    {
       icon: <FaSolarPanel className="text-3xl text-[#FFD700]" />,
       title: "Solar Energy",
       description: "Commercial and residential solar PV installations",
     },
+    {
+      icon: <FaWater className="text-3xl text-[#00B4D8]" />,
+      title: "Water Solutions",
+      description: "Sustainable borehole development and water infrastructure",
+    },
+    
     // {
     //   icon: <FaOilCan className="text-3xl text-[#BCBCBC]" />,
     //   title: "Drilling Expertise",
