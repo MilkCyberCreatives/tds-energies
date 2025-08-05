@@ -27,7 +27,7 @@ export default function AboutSection() {
     {
       icon: <FaLeaf className="text-3xl text-[#70E000]" />,
       title: "Hydrogen",
-      description: "Pioneering natural hydrogen exploration",
+      description: "Pioneering hydrogen exploration",
     },
   ];
 
