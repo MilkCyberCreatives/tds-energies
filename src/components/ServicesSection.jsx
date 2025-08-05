@@ -191,7 +191,7 @@ export default function ServicesSection() {
                 <span>Technical Edge</span>
               </h3>
               <p className="text-[#BCBCBC]">
-                Level 1 B-BBEE rated with ISO-compliant processes and 100% black female leadership.
+                Level 1 B-BBEE rated and 100% black female leadership.
               </p>
             </motion.div>
           </div>
