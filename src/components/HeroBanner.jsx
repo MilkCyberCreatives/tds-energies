@@ -11,18 +11,19 @@ export default function HeroBanner() {
           style={{ backgroundImage: "url('/images/hero.jpg')" }}
           aria-hidden="true"
         />
-        <div className="absolute inset-0 bg-black/20 backdrop-blur-[1px]" />
+        {/* Slightly darker overlay to improve text visibility */}
+        <div className="absolute inset-0 bg-black/40" />
       </div>
 
-      {/* Transparent Glass Content */}
+      {/* Content - No Glass */}
       <motion.div
-        className="relative p-10 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 shadow-xl max-w-4xl w-full mx-4 text-center"
+        className="relative z-10 text-center px-4"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <motion.h1
-          className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight"
+          className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight drop-shadow-md"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.8 }}
@@ -31,43 +32,19 @@ export default function HeroBanner() {
         </motion.h1>
 
         <motion.p
-          className="text-lg md:text-xl text-[#E0E0E0] mb-10 max-w-2xl mx-auto"
+          className="text-lg md:text-xl text-white mb-10 max-w-2xl mx-auto drop-shadow-sm"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.8 }}
         >
           Mining, Water, Energy, Hydrogen <br /> Building Resilient Infrastructure for South Africa
         </motion.p>
-
-        <motion.div
-          className="flex justify-center gap-4 flex-wrap"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.6, duration: 0.8 }}
-        >
-          {/* <motion.a
-            href="#services"
-            className="px-8 py-3.5 rounded-lg bg-[#FFD700]/90 hover:bg-[#FFD700] text-[#1a1a1a] font-semibold hover:shadow-[0_0_20px_rgba(255,215,0,0.3)] transition-all"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Explore Services
-          </motion.a> */}
-          {/* <motion.a
-            href="#contact"
-            className="px-8 py-3.5 rounded-lg border-2 border-[#FFD700]/50 hover:border-[#FFD700] text-[#FFD700] font-semibold hover:shadow-[0_0_15px_rgba(255,215,0,0.2)] transition-all"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Contact Us
-          </motion.a> */}
-        </motion.div>
       </motion.div>
 
       {/* Scroll Down Arrow */}
       <motion.a
         href="#services"
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 p-3 rounded-full bg-[#2D2D2D]/50 backdrop-blur-sm border border-white/20 cursor-pointer z-10"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 p-3 rounded-full bg-[#2D2D2D]/60 border border-white/20 cursor-pointer z-10"
         animate={{
           y: [0, 10, 0],
           opacity: [0.8, 1, 0.8]
