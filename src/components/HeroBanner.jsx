@@ -7,7 +7,12 @@ export default function HeroBanner() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <div
-          className="h-full w-full bg-cover bg-center"
+          className="h-full w-full bg-cover bg-center md:hidden"
+          style={{ backgroundImage: "url('/tds-mobile.jpg')" }}
+          aria-hidden="true"
+        />
+        <div
+          className="hidden h-full w-full bg-cover bg-center md:block"
           style={{ backgroundImage: "url('/images/hero.jpg')" }}
           aria-hidden="true"
         />

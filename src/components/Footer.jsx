@@ -1,14 +1,42 @@
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { FaLinkedin, FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaPhoneAlt, FaClock } from "react-icons/fa";
+import {
+  FaClock,
+  FaEnvelope,
+  FaLinkedin,
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaWhatsapp,
+} from "react-icons/fa";
+
+const quickLinks = [
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Projects", href: "/projects" },
+  { label: "Contact", href: "/contact" },
+];
+
+const serviceLinks = [
+  "Drilling Services",
+  "Solar Energy",
+  "Water Solutions",
+  "Hydrogen",
+  "Infrastructure Development",
+];
+
+const socialLinks = [
+  { icon: <FaLinkedin />, href: "https://linkedin.com" },
+  { icon: <FaWhatsapp />, href: "https://wa.me/27712345678" },
+  { icon: <FaEnvelope />, href: "mailto:info@tdsenergies.com" },
+];
 
 export default function Footer() {
   return (
-    <footer className="relative bg-[#1a1a1a] pt-20 pb-10 px-4 overflow-hidden">
-      {/* Background texture */}
+    <footer className="relative bg-[#1a1a1a] pt-10 md:pt-12 pb-6 px-4 overflow-hidden">
       <div className="absolute inset-0 bg-[url('/images/footer/grid-pattern.jpg')] bg-cover opacity-10" />
-      
-      {/* Glass footer panel */}
-      <motion.div 
+
+      <motion.div
         className="relative max-w-7xl mx-auto glass-panel"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -16,7 +44,6 @@ export default function Footer() {
         viewport={{ once: true, margin: "-100px" }}
       >
         <div className="grid md:grid-cols-4 gap-8 p-8 md:p-12">
-          {/* Column 1: Logo & About */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -27,31 +54,26 @@ export default function Footer() {
               <img src="/logo.svg" alt="TDS Energies" className="h-10 w-auto" />
             </div>
             <p className="text-[#BCBCBC] mb-6 text-sm leading-relaxed">
-              Pioneering sustainable energy, water, and drilling solutions for South Africa's future.
+              Pioneering sustainable energy, water, and drilling solutions for
+              South Africa&apos;s future.
             </p>
             <div className="flex gap-4">
-  {[
-    { icon: <FaLinkedin />, color: "#0077B5", href: "https://linkedin.com" },
-    { icon: <FaWhatsapp />, color: "#25D366", href: "https://wa.me/27712345678" },
-    { icon: <FaEnvelope />, color: "#D44638", href: "mailto:info@tdsenergies.com" }
-  ].map((social, index) => (
-    <motion.a
-      key={index}
-      href={social.href}
-      target="_blank"
-      rel="noreferrer"
-      className="p-3 rounded-full hover:bg-[#FFD700] text-[#BCBCBC] hover:text-[#1a1a1a] transition-all"
-      whileHover={{ y: -3, scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
-    >
-      {social.icon}
-    </motion.a>
-  ))}
-</div>
-
+              {socialLinks.map((social, index) => (
+                <motion.a
+                  key={index}
+                  href={social.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="p-3 rounded-full hover:bg-[#FFD700] text-[#BCBCBC] hover:text-[#1a1a1a] transition-all"
+                  whileHover={{ y: -3, scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {social.icon}
+                </motion.a>
+              ))}
+            </div>
           </motion.div>
 
-          {/* Column 2: Quick Links */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -60,7 +82,7 @@ export default function Footer() {
           >
             <h3 className="text-lg font-semibold text-white mb-6 relative inline-block">
               Quick Links
-              <motion.span 
+              <motion.span
                 className="absolute bottom-0 left-0 h-px bg-[#FFD700]"
                 initial={{ width: 0 }}
                 whileInView={{ width: "100%" }}
@@ -69,28 +91,27 @@ export default function Footer() {
               />
             </h3>
             <ul className="space-y-3">
-              {["Home", "About Us", "Services", "Projects", "Contact"].map((link, index) => (
+              {quickLinks.map((link, index) => (
                 <motion.li
-                  key={index}
+                  key={link.href}
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.3 + index * 0.05 }}
                   viewport={{ once: true }}
                   whileHover={{ x: 5 }}
                 >
-                  <a 
-                    href={`#${link.toLowerCase().replace(' ', '-')}`} 
+                  <Link
+                    href={link.href}
                     className="text-[#BCBCBC] hover:text-[#FFD700] transition-colors flex items-center gap-2 group"
                   >
                     <span className="w-2 h-2 bg-[#FFD700] rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-                    {link}
-                  </a>
+                    {link.label}
+                  </Link>
                 </motion.li>
               ))}
             </ul>
           </motion.div>
 
-          {/* Column 3: Services */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -99,7 +120,7 @@ export default function Footer() {
           >
             <h3 className="text-lg font-semibold text-white mb-6 relative inline-block">
               Our Services
-              <motion.span 
+              <motion.span
                 className="absolute bottom-0 left-0 h-px bg-[#FFD700]"
                 initial={{ width: 0 }}
                 whileInView={{ width: "100%" }}
@@ -108,34 +129,27 @@ export default function Footer() {
               />
             </h3>
             <ul className="space-y-3">
-              {[
-                "Drilling Services",
-                "Solar Energy",
-                "Water Solutions",
-                "Hydrogen",
-                "Infrastructure Development"
-              ].map((service, index) => (
+              {serviceLinks.map((service, index) => (
                 <motion.li
-                  key={index}
+                  key={service}
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.4 + index * 0.05 }}
                   viewport={{ once: true }}
                   whileHover={{ x: 5 }}
                 >
-                  <a 
-                    href="#services" 
+                  <Link
+                    href="/services"
                     className="text-[#BCBCBC] hover:text-[#FFD700] transition-colors flex items-center gap-2 group"
                   >
                     <span className="w-2 h-2 bg-[#FFD700] rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
                     {service}
-                  </a>
+                  </Link>
                 </motion.li>
               ))}
             </ul>
           </motion.div>
 
-          {/* Column 4: Contact Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -144,7 +158,7 @@ export default function Footer() {
           >
             <h3 className="text-lg font-semibold text-white mb-6 relative inline-block">
               Contact Us
-              <motion.span 
+              <motion.span
                 className="absolute bottom-0 left-0 h-px bg-[#FFD700]"
                 initial={{ width: 0 }}
                 whileInView={{ width: "100%" }}
@@ -154,13 +168,19 @@ export default function Footer() {
             </h3>
             <ul className="space-y-4">
               {[
-                { icon: <FaMapMarkerAlt className="text-[#FFD700] flex-shrink-0" />, 
-                  text: "34 Albatros, Secunda, Mpumalanga" },
-                { icon: <FaPhoneAlt className="text-[#FFD700] flex-shrink-0" />, 
-                  text: "+27 17 634 1922", 
-                  link: "tel:+27176341922" },
-                { icon: <FaClock className="text-[#FFD700] flex-shrink-0" />, 
-                  text: "Mon-Fri: 8AM - 5PM" }
+                {
+                  icon: <FaMapMarkerAlt className="text-[#FFD700] flex-shrink-0" />,
+                  text: "34 Albatros, Secunda, Mpumalanga",
+                },
+                {
+                  icon: <FaPhoneAlt className="text-[#FFD700] flex-shrink-0" />,
+                  text: "+27 17 634 1922",
+                  link: "tel:+27176341922",
+                },
+                {
+                  icon: <FaClock className="text-[#FFD700] flex-shrink-0" />,
+                  text: "Mon-Fri: 8AM - 5PM",
+                },
               ].map((item, index) => (
                 <motion.li
                   key={index}
@@ -172,7 +192,10 @@ export default function Footer() {
                 >
                   <div className="mt-1">{item.icon}</div>
                   {item.link ? (
-                    <a href={item.link} className="text-[#BCBCBC] hover:text-[#FFD700] transition-colors">
+                    <a
+                      href={item.link}
+                      className="text-[#BCBCBC] hover:text-[#FFD700] transition-colors"
+                    >
                       {item.text}
                     </a>
                   ) : (
@@ -184,8 +207,7 @@ export default function Footer() {
           </motion.div>
         </div>
 
-        {/* Copyright bar */}
-        <motion.div 
+        <motion.div
           className="p-6 text-center border-t border-[#ffffff]/10"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -193,14 +215,12 @@ export default function Footer() {
           viewport={{ once: true }}
         >
           <p className="text-[#BCBCBC] text-sm">
-            © {new Date().getFullYear()} TDS Energies (Pty) Ltd. All rights reserved. | 
-            <a href="#" className="hover:text-[#FFD700] ml-2 transition-colors">Privacy Policy</a> | 
-            <a href="#" className="hover:text-[#FFD700] ml-2 transition-colors">Terms of Service</a>
+            &copy; {new Date().getFullYear()} TDS Energies (Pty) Ltd. All rights
+            reserved.
           </p>
         </motion.div>
       </motion.div>
 
-      {/* Global Styles */}
       <style jsx>{`
         .glass-panel {
           background: rgba(45, 45, 45, 0.7);

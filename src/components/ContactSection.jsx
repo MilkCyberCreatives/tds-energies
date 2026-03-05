@@ -1,13 +1,17 @@
 import { motion } from "framer-motion";
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaPaperPlane } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaPaperPlane,
+  FaPhoneAlt,
+} from "react-icons/fa";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="relative py-20 px-4">
-      {/* Background texture */}
+    <section id="contact" className="relative py-10 md:py-12 px-4">
       <div className="absolute inset-0 bg-[url('/images/contact/grid-pattern.jpg')] bg-cover opacity-10" />
-      
-      <motion.div 
+
+      <motion.div
         className="relative max-w-7xl mx-auto glass-panel"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -15,10 +19,8 @@ export default function ContactSection() {
         viewport={{ once: true, margin: "-100px" }}
       >
         <div className="grid md:grid-cols-2 gap-0">
-          
-          {/* Contact Form */}
           <div className="p-8 md:p-12 glass-contact-form">
-            <motion.h2 
+            <motion.h2
               className="text-3xl md:text-4xl font-bold mb-6 text-white"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -34,7 +36,7 @@ export default function ContactSection() {
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
               viewport={{ once: true }}
-              onSubmit={(e) => e.preventDefault()}
+              onSubmit={(event) => event.preventDefault()}
             >
               <div className="grid md:grid-cols-2 gap-6">
                 <motion.div
@@ -43,8 +45,10 @@ export default function ContactSection() {
                   transition={{ delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  <label htmlFor="name" className="block text-[#BCBCBC] mb-2">Name</label>
-                  <input 
+                  <label htmlFor="name" className="block text-[#BCBCBC] mb-2">
+                    Name
+                  </label>
+                  <input
                     type="text"
                     id="name"
                     name="name"
@@ -59,8 +63,10 @@ export default function ContactSection() {
                   transition={{ delay: 0.35 }}
                   viewport={{ once: true }}
                 >
-                  <label htmlFor="email" className="block text-[#BCBCBC] mb-2">Email</label>
-                  <input 
+                  <label htmlFor="email" className="block text-[#BCBCBC] mb-2">
+                    Email
+                  </label>
+                  <input
                     type="email"
                     id="email"
                     name="email"
@@ -77,8 +83,10 @@ export default function ContactSection() {
                 transition={{ delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                <label htmlFor="subject" className="block text-[#BCBCBC] mb-2">Subject</label>
-                <input 
+                <label htmlFor="subject" className="block text-[#BCBCBC] mb-2">
+                  Subject
+                </label>
+                <input
                   type="text"
                   id="subject"
                   name="subject"
@@ -94,15 +102,17 @@ export default function ContactSection() {
                 transition={{ delay: 0.45 }}
                 viewport={{ once: true }}
               >
-                <label htmlFor="message" className="block text-[#BCBCBC] mb-2">Message</label>
-                <textarea 
+                <label htmlFor="message" className="block text-[#BCBCBC] mb-2">
+                  Message
+                </label>
+                <textarea
                   id="message"
                   name="message"
                   rows="4"
                   className="w-full px-4 py-3 rounded-lg glass-input focus:glass-input-active"
                   placeholder="Your message here..."
                   required
-                ></textarea>
+                />
               </motion.div>
 
               <motion.div
@@ -117,15 +127,15 @@ export default function ContactSection() {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  Send Message <FaPaperPlane className="ml-1 group-hover:translate-x-1 transition-transform" />
+                  Send Message
+                  <FaPaperPlane className="ml-1 group-hover:translate-x-1 transition-transform" />
                 </motion.button>
               </motion.div>
             </motion.form>
           </div>
 
-          {/* Contact Info */}
           <div className="p-8 md:p-12 glass-contact-info">
-            <motion.h3 
+            <motion.h3
               className="text-2xl font-bold mb-8 text-white"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -136,7 +146,6 @@ export default function ContactSection() {
             </motion.h3>
 
             <div className="space-y-8">
-              {/* Location */}
               <motion.div
                 className="flex items-start gap-4 group"
                 initial={{ opacity: 0, x: 20 }}
@@ -148,12 +157,17 @@ export default function ContactSection() {
                   <FaMapMarkerAlt className="text-xl" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold text-white mb-1">Our Location</h4>
-                  <p className="text-[#BCBCBC] leading-snug">34 Albatros, Secunda<br />Mpumalanga, South Africa</p>
+                  <h4 className="text-lg font-semibold text-white mb-1">
+                    Our Location
+                  </h4>
+                  <p className="text-[#BCBCBC] leading-snug">
+                    34 Albatros, Secunda
+                    <br />
+                    Mpumalanga, South Africa
+                  </p>
                 </div>
               </motion.div>
 
-              {/* Phone */}
               <motion.div
                 className="flex items-start gap-4 group"
                 initial={{ opacity: 0, x: 20 }}
@@ -165,14 +179,20 @@ export default function ContactSection() {
                   <FaPhoneAlt className="text-xl" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold text-white mb-1">Phone</h4>
+                  <h4 className="text-lg font-semibold text-white mb-1">
+                    Phone
+                  </h4>
                   <p className="text-[#BCBCBC]">
-                    <a href="tel:+27176341922" className="hover:text-[#FFD700] transition">+27 17 634 1922</a>
+                    <a
+                      href="tel:+27176341922"
+                      className="hover:text-[#FFD700] transition"
+                    >
+                      +27 17 634 1922
+                    </a>
                   </p>
                 </div>
               </motion.div>
 
-              {/* Email */}
               <motion.div
                 className="flex items-start gap-4 group"
                 initial={{ opacity: 0, x: 20 }}
@@ -184,26 +204,43 @@ export default function ContactSection() {
                   <FaEnvelope className="text-xl" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold text-white mb-1">Email</h4>
+                  <h4 className="text-lg font-semibold text-white mb-1">
+                    Email
+                  </h4>
                   <p className="text-[#BCBCBC]">
-                    <a href="mailto:admin@techniquedrillingservices.co.za" className="hover:text-[#FFD700] transition">admin@techniquedrillingservices.co.za</a>
+                    <a
+                      href="mailto:info@tdsenergies.com"
+                      className="hover:text-[#FFD700] transition"
+                    >
+                      info@tdsenergies.com
+                    </a>
                   </p>
                 </div>
               </motion.div>
 
-              {/* Business Hours */}
-              <motion.div 
+              <motion.div
                 className="pt-8"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h4 className="text-lg font-semibold text-white mb-4">Business Hours</h4>
+                <h4 className="text-lg font-semibold text-white mb-4">
+                  Business Hours
+                </h4>
                 <div className="space-y-2 text-[#BCBCBC]">
-                  <p className="flex justify-between"><span>Monday - Friday</span> <span>8:00 - 17:00</span></p>
-                  <p className="flex justify-between"><span>Saturday</span> <span>9:00 - 13:00</span></p>
-                  <p className="flex justify-between"><span>Sunday</span> <span>Closed</span></p>
+                  <p className="flex justify-between">
+                    <span>Monday - Friday</span>
+                    <span>8:00 - 17:00</span>
+                  </p>
+                  <p className="flex justify-between">
+                    <span>Saturday</span>
+                    <span>9:00 - 13:00</span>
+                  </p>
+                  <p className="flex justify-between">
+                    <span>Sunday</span>
+                    <span>Closed</span>
+                  </p>
                 </div>
               </motion.div>
             </div>
@@ -211,7 +248,6 @@ export default function ContactSection() {
         </div>
       </motion.div>
 
-      {/* Global Styles */}
       <style jsx>{`
         .glass-panel {
           background: rgba(45, 45, 45, 0.7);

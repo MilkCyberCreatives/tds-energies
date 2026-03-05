@@ -1,41 +1,34 @@
 import { motion } from "framer-motion";
-import { FaWater, FaSolarPanel, FaOilCan, FaLeaf } from "react-icons/fa";
+import { FaLeaf, FaOilCan, FaSolarPanel, FaWater } from "react-icons/fa";
+
+const services = [
+  {
+    icon: <FaOilCan className="text-3xl text-[#BCBCBC]" />,
+    title: "Drilling Expertise",
+    description: "Precision drilling for energy and mining sectors.",
+  },
+  {
+    icon: <FaSolarPanel className="text-3xl text-[#FFD700]" />,
+    title: "Solar Energy",
+    description: "Commercial and residential solar PV installations.",
+  },
+  {
+    icon: <FaWater className="text-3xl text-[#00B4D8]" />,
+    title: "Water Solutions",
+    description: "Sustainable borehole development and water infrastructure.",
+  },
+  {
+    icon: <FaLeaf className="text-3xl text-[#70E000]" />,
+    title: "Hydrogen",
+    description: "Pioneering hydrogen exploration.",
+  },
+];
 
 export default function AboutSection() {
-  const services = [
-    {
-      icon: <FaOilCan className="text-3xl text-[#BCBCBC]" />,
-      title: "Drilling Expertise",
-      description: "Precision drilling for energy and mining sectors",
-    },
-    {
-      icon: <FaSolarPanel className="text-3xl text-[#FFD700]" />,
-      title: "Solar Energy",
-      description: "Commercial and residential solar PV installations",
-    },
-    {
-      icon: <FaWater className="text-3xl text-[#00B4D8]" />,
-      title: "Water Solutions",
-      description: "Sustainable borehole development and water infrastructure",
-    },
-    
-    // {
-    //   icon: <FaOilCan className="text-3xl text-[#BCBCBC]" />,
-    //   title: "Drilling Expertise",
-    //   description: "Precision drilling for energy and mining sectors",
-    // },
-    {
-      icon: <FaLeaf className="text-3xl text-[#70E000]" />,
-      title: "Hydrogen",
-      description: "Pioneering hydrogen exploration",
-    },
-  ];
-
   return (
-    <section id="about" className="relative py-20 px-4">
-      {/* Background texture */}
+    <section id="about" className="relative py-10 md:py-12 px-4">
       <div className="absolute inset-0 bg-[url('/images/about/grid-pattern.jpg')] bg-cover opacity-10" />
-      
+
       <motion.div
         className="relative max-w-7xl mx-auto glass-panel"
         initial={{ opacity: 0, y: 50 }}
@@ -44,7 +37,6 @@ export default function AboutSection() {
         viewport={{ once: true, margin: "-100px" }}
       >
         <div className="grid md:grid-cols-2 gap-8 p-8 md:p-12">
-          {/* Left Text Column */}
           <div className="flex flex-col justify-center">
             <motion.h2
               className="text-3xl md:text-4xl font-bold mb-6 text-white"
@@ -63,8 +55,11 @@ export default function AboutSection() {
               transition={{ delay: 0.4, duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Founded in 2014 as Technique Drilling Services, we've evolved into{" "}
-              <span className="text-[#FFD700]">TDS Energies</span>, a 100% Black-owned, 51% Black female youth-owned, innovative drilling and woman-led infrastructure company, driving South Africa’s energy transition through cutting-edge water, energy, and hydrogen solutions.
+              Founded in 2014 as Technique Drilling Services, we evolved into{" "}
+              <span className="text-[#FFD700]">TDS Energies</span>, a 100%
+              Black-owned, 51% Black female youth-owned infrastructure company
+              helping drive South Africa&apos;s energy transition through water,
+              energy, drilling, and hydrogen solutions.
             </motion.p>
 
             <motion.div
@@ -74,9 +69,9 @@ export default function AboutSection() {
               transition={{ delay: 0.6, staggerChildren: 0.1 }}
               viewport={{ once: true }}
             >
-              {services.map((service, index) => (
+              {services.map((service) => (
                 <motion.div
-                  key={index}
+                  key={service.title}
                   className="glass-card hover:glass-card-hover p-4 rounded-lg"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -94,7 +89,6 @@ export default function AboutSection() {
             </motion.div>
           </div>
 
-          {/* Right Image Column */}
           <div className="relative h-80 md:h-auto min-h-[400px]">
             <motion.div
               className="absolute inset-0 bg-[url('/images/about1.jpg')] bg-cover bg-center rounded-lg"
@@ -124,7 +118,6 @@ export default function AboutSection() {
           </div>
         </div>
 
-        {/* Stats Bar */}
         <motion.div
           className="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 glass-stats-bar"
           initial={{ opacity: 0 }}
@@ -137,9 +130,9 @@ export default function AboutSection() {
             { value: "L1", label: "B-BBEE" },
             { value: "10+", label: "Years Experience" },
             { value: "SDG", label: "Aligned" },
-          ].map((stat, index) => (
+          ].map((stat) => (
             <motion.div
-              key={index}
+              key={stat.label}
               className="text-center p-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -156,7 +149,6 @@ export default function AboutSection() {
         </motion.div>
       </motion.div>
 
-      {/* Global Styles */}
       <style jsx>{`
         .glass-panel {
           background: rgba(45, 45, 45, 0.7);

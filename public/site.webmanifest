@@ -1,0 +1,21 @@
+{
+  "name": "TDS Energies",
+  "short_name": "TDS Energies",
+  "description": "TDS Energies delivers drilling, water infrastructure, solar energy, and hydrogen-ready solutions across South Africa.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#1a1a1a",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/logo2.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

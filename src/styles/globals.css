@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
 
 body {
   background-color: #1a1a1a;
@@ -9,6 +16,6 @@ body {
 }
 
 section + section {
-  margin-top: 1.5rem; /* around 24px */
-  padding-top: 1rem;  /* around 16px */
+  margin-top: 0;
+  padding-top: 0;
 }

@@ -26,7 +26,7 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section id="why-choose-us" className="relative py-20 px-4">
+    <section id="why-choose-us" className="relative py-10 md:py-12 px-4">
       {/* Background texture */}
       <div className="absolute inset-0 bg-[url('/images/why-choose-us/grid-pattern.jpg')] bg-cover opacity-10" />
       
@@ -98,7 +98,7 @@ export default function WhyChooseUs() {
 
           {/* Stats bar */}
           <motion.div 
-            className="grid md:grid-cols-3 gap-6 mt-12 glass-stats"
+            className="grid md:grid-cols-3 gap-6 mt-8 md:mt-10 glass-stats"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
